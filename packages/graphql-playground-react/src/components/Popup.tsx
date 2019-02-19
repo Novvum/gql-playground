@@ -40,7 +40,7 @@ export default class Popup extends React.Component<Props, {}> {
     const modalStyle = {
       overlay: {
         ...fieldModalStyle.overlay,
-        background: darkBg ? 'rgba(23,42,58,1.0)' : 'rgba(255,255,255,.9)',
+        background: darkBg ? '#191a21' : 'rgba(255,255,255,.9)',
       },
       content: {
         ...fieldModalStyle.content,

@@ -101,7 +101,7 @@ export default connect(
 const StyledTabBar = styled.div`
   color: white;
   height: 57px;
-  background: ${p => p.theme.editorColours.background};
+  background: ${p => p.theme.editorColours.sidebarTop};
   overflow: hidden;
   -webkit-app-region: drag;
   &:hover {
@@ -129,7 +129,7 @@ interface PlusProps {
 const Plus = styled<PlusProps, 'div'>('div')`
   box-sizing: border-box;
   display: flex;
-  visibility: ${p => (p.sorting ? 'hidden' : 'visible')}
+  visibility: ${p => (p.sorting ? 'hidden' : 'visible')};
   height: 43px;
   width: 43px;
   border-radius: 2px;

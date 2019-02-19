@@ -139,7 +139,4 @@ const Result = styled<ResultProps, 'div'>('div')`
     max-width: 50vw;
     margin-right: 10px;
   }
-  .cm-string {
-    color: ${p => p.theme.editorColours.property} !important;
-  }
 `

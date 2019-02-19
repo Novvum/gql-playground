@@ -14,7 +14,7 @@ const EditorWrapper = styled.div`
 
   /* Proppery */
   .cm-property {
-    color: ${p => p.theme.editorColours.property};
+    color: ${p => p.theme.editorColours.property} !important;
   }
 
   /* Keyword */
@@ -44,7 +44,7 @@ const EditorWrapper = styled.div`
 
   /* String */
   .cm-string {
-    color: ${p => p.theme.editorColours.string};
+    color: ${p => p.theme.editorColours.string} !important;
   }
 
   /* Boolean */
@@ -54,7 +54,7 @@ const EditorWrapper = styled.div`
 
   /* EnumValue */
   .cm-string-2 {
-    color: ${p => p.theme.editorColours.string2};
+    color: ${p => p.theme.editorColours.string2} !important;
   }
 
   /* Variable */
