@@ -97,8 +97,45 @@ export interface EditorColours {
   subscriptionTimeBoaderTop: string
   subscriptionTimeText: string
 }
-
 export const darkColours: Colours = {
+  green: '#27ae60',
+  darkBlue: 'rgb(23, 42, 58)',
+  darkBlue50: 'rgba(23, 42, 58, 0.5)',
+  darkBlue80: 'rgba(23, 42, 58, 0.8)',
+  darkBlue60: 'rgba(23, 42, 58, 0.6)',
+  darkBlue30: 'rgba(23, 42, 58, 0.3)',
+  darkBlue20: 'rgba(23, 42, 58, 0.2)',
+  darkBlue10: 'rgba(23, 42, 58, 0.1)',
+  darkerBlue: '#0F202D',
+  darkestBlue: 'rgb(11,20,28)',
+  white10: 'rgba(255, 255, 255, 0.1)',
+  white20: 'rgba(255, 255, 255, 0.2)',
+  white30: 'rgba(255, 255, 255, 0.3)',
+  white60: 'rgba(255, 255, 255, 0.6)',
+  white70: 'rgba(255, 255, 255, 0.7)',
+  white80: 'rgba(255, 255, 255, 0.8)',
+  white: 'rgba(255, 255, 255, 1)',
+  black02: 'rgba(0, 0, 0, 0.02)',
+  black07: 'rgba(0, 0, 0, 0.07)',
+  black04: 'rgba(0, 0, 0, 0.04)',
+  black10: 'rgba(0, 0, 0, 0.1)',
+  black30: 'rgba(0, 0, 0, 0.3)',
+  black40: 'rgba(0, 0, 0, 0.4)',
+  black50: 'rgba(0, 0, 0, 0.5)',
+  red: '#f25c54',
+  orange: 'rgba(241, 143, 1, 1)',
+  blue: 'rgba(42, 126, 210, 1)',
+  purple: 'rgb(164, 3, 111)',
+
+  paleText: 'rgba(0, 0, 0, 0.5)',
+  paleGrey: '#f3f4f4', // use for bgs, borders, etc
+  lightGrey: '#eeeff0',
+  lighterGrey: '#f6f7f7',
+  // New colors
+  text: 'rgba(255,255,255,0.6)',
+  textInactive: '#555e66',
+}
+export const draculaColours: Colours = {
   green: '#50fa7b',
   darkBlue: '#6272a4',
   darkBlue50: '#6272a450',
@@ -174,8 +211,65 @@ export const lightColours: Colours = {
   text: 'rgba(0,0,0,.7)',
   textInactive: 'rgba(0,0,0,.3)',
 }
-
 export const darkEditorColours: EditorColours = {
+  property: 'rgb(41, 185, 115)',
+  comment: 'rgba(255, 255, 255, 0.3)',
+  punctuation: 'rgba(255, 255, 255, 0.4)',
+  keyword: 'rgb(42, 126, 211)',
+  def: 'rgb(56, 189, 193)',
+  qualifier: '#1c92a9',
+  attribute: 'rgb(247, 116, 102)',
+  number: '#2882f9',
+  string: '#d64292',
+  builtin: '#d47509',
+  string2: '#0b7fc7',
+  variable: 'rgb(181, 34, 130)',
+  meta: '#b33086',
+  atom: 'rgb(249, 233, 34)',
+  ws: 'rgba(255, 255, 255, 0.4)',
+  selection: 'rgba(255, 255, 255, 0.1)',
+  cursorColor: 'rgba(255, 255, 255, 0.4)',
+  text: '#fff',
+  textInactive: 'rgba(255, 255, 255, 0.6)',
+  background: '#09141c',
+  sidebarTop: '#0f202d',
+  sidebar: '#172b3a',
+  sidebarBottom: '#172b3a',
+  sidebarItemActive: 'rgb(23, 42, 58)',
+  sidebarItemSide: '#27ae60',
+  sidebarItemSessions: 'rgba(255, 255, 255, 0.05)',
+  tab: '#172b3a',
+  tabInactive: '#0f202d',
+  tabText: '#fff',
+  navigationBar: '#172b3a',
+  navigationBarText: 'rgba(255, 255, 255, 0.6)',
+  editorBackground: '#0f202d',
+  resultBackground: '#172b3a',
+  leftDrawerBackground: '#0b1924',
+  rightDrawerBackground: '#0b1924',
+  drawerText: 'rgba(255,255,255,0.6)',
+  drawerTextInactive: '#555e66',
+  executeButton: 'rgb(185, 191, 196)',
+  executeButtonBorder: 'rgb(11, 20, 28)',
+  executeButtonHover: 'rgb(195, 201, 206)',
+  executeButtonSubscription: '#f25c54',
+  executeButtonSubscriptionHover: '#f36c65',
+  icon: 'rgb(74, 85, 95)',
+  iconHover: 'rgba(255, 255, 255, 0.6)',
+  pollingIcon: 'rgba(139, 149, 156, 1)',
+  pollingIconShadow: 'rgba(139, 149, 156, 0.4)',
+  button: '#0F202D',
+  buttonHover: '#122535',
+  buttonText: 'rgba(255,255,255,0.6)',
+  buttonWorkspace: '#b9bfc4',
+  buttonWorkspaceHover: '#a4acb2',
+  buttonWorkspaceText: 'rgb(23, 42, 58)',
+  circle: 'rgba(255, 255, 255, 0.4)',
+  subscriptionTimeBoaderTop: 'rgba(255, 255, 255, 0.2)',
+  subscriptionTimeText: 'rgba(255, 255, 255, 0.5)',
+}
+
+export const draculaEditorColours: EditorColours = {
   property: '#66d9ef',
   comment: '#6272a4',
   punctuation: '#FF79C6',
@@ -194,7 +288,7 @@ export const darkEditorColours: EditorColours = {
   selection: 'rgba(255, 255, 255, 0.10)',
   cursorColor: '#f8f8f0',
   text: '#f8f8f2',
-  textInactive: 'rgba(255, 255, 255, 0.6)',
+  textInactive: '#6272a4',
   background: '#282a36',
   sidebarTop: '#191a21',
   sidebar: '#191a21',
@@ -332,7 +426,7 @@ export interface Shorthands {
 export const shorthands: Shorthands = {}
 
 export interface ThemeInterface {
-  mode: 'light' | 'dark'
+  mode: 'light' | 'dark' | 'dracula'
   colours: Colours
   sizes: Sizes
   shorthands: Shorthands
@@ -341,10 +435,10 @@ export interface ThemeInterface {
 }
 
 export const theme: any = {
-  mode: 'dark',
-  colours: darkColours,
+  mode: 'dracula',
+  colours: draculaColours,
   sizes,
   shorthands,
-  editorColours: darkEditorColours,
+  editorColours: draculaEditorColours,
   settings: defaultSettings,
 }

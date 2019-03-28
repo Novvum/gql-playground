@@ -1,3 +1,4 @@
+/* tslint:disable */
 import * as React from 'react'
 import GraphQLEditor from './Playground/GraphQLEditor'
 import TabBar from './Playground/TabBar'
