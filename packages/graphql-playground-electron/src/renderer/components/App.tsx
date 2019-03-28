@@ -108,7 +108,7 @@ class App extends React.Component<ReduxProps, State> {
     const { endpoint, platformToken } = this.getArgs()
     this.state = {
       openTooltipTheme: false,
-      theme: 'dark',
+      theme: 'dracula',
       endpoint,
       platformToken,
       loading: false,

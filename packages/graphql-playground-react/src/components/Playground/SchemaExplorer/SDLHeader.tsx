@@ -135,7 +135,7 @@ const Option = styled(Download)`
 `
 
 const styleHelper = p => {
-  if (p.theme.mode === 'dark') {
+  if (p.theme.mode !== 'light') {
     return {
       title: 'white',
       subtitle: '#8B959C',

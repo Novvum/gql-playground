@@ -64,7 +64,7 @@ These are the settings currently available:
   'editor.fontFamily': `'Source Code Pro', 'Consolas', 'Inconsolata', 'Droid Sans Mono', 'Monaco', monospace`,
   'editor.fontSize': 14,
   'editor.reuseHeaders': true, // new tab reuses headers from last tab
-  'editor.theme': 'dark', // possible values: 'dark', 'light'
+  'editor.theme': 'dracula', // possible values: 'dark', 'light', 'dracula'
   'general.betaUpdates': false,
   'prettier.printWidth': 80,
   'prettier.tabWidth': 2,
@@ -93,21 +93,21 @@ The React component `<Playground />` and all middlewares expose the following op
 
 ```ts
 interface ISettings {
-  'editor.cursorShape': 'line' | 'block' | 'underline'
-  'editor.fontFamily': string
-  'editor.fontSize': number
-  'editor.reuseHeaders': boolean
-  'editor.theme': 'dark' | 'light'
-  'general.betaUpdates': boolean
-  'prettier.printWidth': number
-  'prettier.tabWidth': number
-  'prettier.useTabs': boolean
-  'request.credentials': 'omit' | 'include' | 'same-origin'
-  'schema.polling.enable': boolean
-  'schema.polling.endpointFilter': string
-  'schema.polling.interval': number
-  'schema.disableComments': boolean
-  'tracing.hideTracingResponse': boolean
+	'editor.cursorShape': 'line' | 'block' | 'underline'
+	'editor.fontFamily': string
+	'editor.fontSize': number
+	'editor.reuseHeaders': boolean
+	'editor.theme': 'dark' | 'light' | 'dracula'
+	'general.betaUpdates': boolean
+	'prettier.printWidth': number
+	'prettier.tabWidth': number
+	'prettier.useTabs': boolean
+	'request.credentials': 'omit' | 'include' | 'same-origin'
+	'schema.polling.enable': boolean
+	'schema.polling.endpointFilter': string
+	'schema.polling.interval': number
+	'schema.disableComments': boolean
+	'tracing.hideTracingResponse': boolean
 }
 ```
 

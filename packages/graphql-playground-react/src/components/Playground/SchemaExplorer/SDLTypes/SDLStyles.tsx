@@ -12,7 +12,9 @@ export const SchemaExplorerContainer = styled.div`
   align-items: stretch;
   padding: 0px 8px 8px 8px;
   background: ${p =>
-    p.theme.mode === 'dark' ? p.theme.editorColours.editorBackground : 'white'};
+    p.theme.mode !== 'light'
+      ? p.theme.editorColours.editorBackground
+      : 'white'};
   font-family: ${p => p.theme.settings['editor.fontFamily']};
   font-size: ${p => `${p.theme.settings['editor.fontSize']}px`};
   outline: none !important;
