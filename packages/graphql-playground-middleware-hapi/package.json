@@ -1,6 +1,6 @@
 {
   "name": "graphql-playground-middleware-hapi",
-  "version": "1.6.10",
+  "version": "1.6.11",
   "homepage": "https://github.com/graphcool/graphql-playground/tree/master/packages/graphql-playground-middleware-hapi",
   "description": "GraphQL IDE for better development workflows (GraphQL Subscriptions, interactive docs & collaboration).",
   "contributors": [
@@ -10,7 +10,7 @@
     "Drake Costa <drake@saeris.io>"
   ],
   "repository": "http://github.com/graphcool/graphql-playground.git",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -40,6 +40,6 @@
     "definition": "dist/index.d.ts"
   },
   "dependencies": {
-    "graphql-playground-html": "1.6.12"
+    "graphql-playground-html": "1.6.13"
   }
 }
