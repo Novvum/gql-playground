@@ -135,30 +135,46 @@ const Option = styled(Download)`
 `
 
 const styleHelper = p => {
-  if (p.theme.mode !== 'light') {
-    return {
-      title: 'white',
-      subtitle: '#8B959C',
-      download: {
-        text: p.open ? '#8B959C' : 'white',
-        button: p.theme.colours.darkBlue,
-      },
-      buttonText: 'white',
-      button: p.theme.colours.darkBlue,
-      buttonHover: '#2B3C48',
-      buttonTextHover: 'white',
-    }
-  }
-  return {
-    title: p.theme.colours.darkBlue,
-    subtitle: 'rgba(61, 88, 102, 0.5)',
+  const dark = {
+    title: 'white',
+    subtitle: '#8B959C',
     download: {
-      text: p.open ? 'rgba(61, 88, 102, 0.5)' : p.theme.colours.darkBlue,
-      button: '#f6f6f6',
+      text: p.open ? '#8B959C' : 'white',
+      button: p.theme.colours.darkBlue,
     },
-    buttonText: p.theme.colours.darkBlue,
-    button: '#f6f6f6',
-    buttonHover: '#EDEDED',
-    buttonTextHover: p.theme.colours.darkBlue,
+    buttonText: 'white',
+    button: p.theme.colours.darkBlue,
+    buttonHover: '#2B3C48',
+    buttonTextHover: 'white',
+  }
+  switch (p.theme) {
+    case 'dark':
+      return dark
+    case 'light':
+      return {
+        title: p.theme.colours.darkBlue,
+        subtitle: 'rgba(61, 88, 102, 0.5)',
+        download: {
+          text: p.open ? 'rgba(61, 88, 102, 0.5)' : p.theme.colours.darkBlue,
+          button: '#f6f6f6',
+        },
+        buttonText: p.theme.colours.darkBlue,
+        button: '#f6f6f6',
+        buttonHover: '#EDEDED',
+        buttonTextHover: p.theme.colours.darkBlue,
+      }
+    default:
+      return {
+        title: p.theme.colours.text,
+        subtitle: '#8B959C',
+        download: {
+          text: p.open ? 'white' : p.theme.colours.text,
+          button: p.theme.editorColours.buttonHover,
+        },
+        buttonText: p.theme.editorColours.buttonText,
+        button: p.theme.editorColours.buttonHover,
+        buttonHover: p.theme.colours.darkBlue,
+        buttonTextHover: 'white',
+      }
   }
 }
