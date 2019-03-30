@@ -188,7 +188,7 @@ const DocsHeader = styled.div`
     }
   }
   .doc-category-item .field-name {
-    color: ${p => p.theme.editorColours.def};
+    color: ${p => p.theme.editorColours.property};
   }
   div {
     background: transparent;
