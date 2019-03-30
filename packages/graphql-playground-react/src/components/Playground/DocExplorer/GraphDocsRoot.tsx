@@ -73,6 +73,6 @@ const DocsRoot = styled.div`
   padding-left: 6px;
 
   .doc-category-item .field-name {
-    color: ${p => p.theme.colours.text};
+    color: ${p => p.theme.colours.property};
   }
 `

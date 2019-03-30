@@ -256,7 +256,7 @@ const DocsCategoryItem = styled<DocsCategoryItemProps, 'div'>('div')`
   background: ${p =>
     // p.active ? p.theme.colours.black07 : p.theme.colours.white
     p.theme.editorColours.editorBackground};
-
+  color: ${p => p.theme.editorColours.punctuation};
   cursor: ${p => (p.clickable ? 'pointer' : 'select')};
 
   &:hover {
@@ -266,7 +266,7 @@ const DocsCategoryItem = styled<DocsCategoryItemProps, 'div'>('div')`
     .type-name,
     .arg-name,
     span {
-      color: ${p => p.theme.editorColours.property} !important;
+      color: ${p => p.theme.editorColours.string} !important;
     }
   }
   b {

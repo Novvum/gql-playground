@@ -178,7 +178,6 @@ const DocsHeader = styled.div`
   background: ${p => `${p.theme.editorColours.editorColours}70`};
   padding-top: 20px;
   padding-bottom: 10px;
-
   .doc-category-item {
     font-size: 14px;
     font-weight: 600;
@@ -186,9 +185,9 @@ const DocsHeader = styled.div`
     .type-name {
       color: ${p => p.theme.editorColours.atom};
     }
-  }
-  .doc-category-item .field-name {
-    color: ${p => p.theme.editorColours.property};
+    .field-name {
+      color: ${p => p.theme.editorColours.property};
+    }
   }
   div {
     background: transparent;
@@ -199,5 +198,9 @@ const DocsHeader = styled.div`
 const DocsDescription = styled(MarkdownContent)`
   font-size: 14px;
   padding: 0 16px 20px 16px;
-  color: ${p => p.theme.editorColours.meta};
+  color: ${p => p.theme.colours.text};
+
+  code {
+    color: ${p => p.theme.editorColours.def};
+  }
 `
