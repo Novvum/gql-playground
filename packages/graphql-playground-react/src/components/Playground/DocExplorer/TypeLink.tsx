@@ -254,18 +254,19 @@ const DocsCategoryItem = styled<DocsCategoryItemProps, 'div'>('div')`
   font-size: 14px;
   transition: 0.1s background-color;
   background: ${p =>
-    p.active ? p.theme.colours.black07 : p.theme.colours.white};
+    // p.active ? p.theme.colours.black07 : p.theme.colours.white
+    p.theme.editorColours.editorBackground};
 
   cursor: ${p => (p.clickable ? 'pointer' : 'select')};
 
   &:hover {
-    color: ${p => p.theme.colours.white};
-    background: #2a7ed3;
+    color: ${p => p.theme.editorColours.keyword};
+    background: ${p => p.theme.editorColours.selection};
     .field-name,
     .type-name,
     .arg-name,
     span {
-      color: ${p => p.theme.colours.white} !important;
+      color: ${p => p.theme.editorColours.property} !important;
     }
   }
   b {
@@ -275,6 +276,7 @@ const DocsCategoryItem = styled<DocsCategoryItemProps, 'div'>('div')`
 
 const Dots = styled.span`
   font-weight: 600;
+  color: ${p => p.theme.editorColours.def};
 `
 
 const IconBox = styled.div`
@@ -285,8 +287,8 @@ const IconBox = styled.div`
 `
 
 const DefaultValue = styled.span`
-  color: ${p => p.theme.colours.black30};
+  color: ${p => p.theme.editorColours.keyword};
   span {
-    color: #1f61a9;
+    color: ${p => p.theme.colours.orange};
   }
 `

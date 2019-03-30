@@ -306,6 +306,7 @@ const Tabs = styled<TabsProps, 'div'>('div')`
   background: white;
   outline: none;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  color: ${p => p.theme.colours.black};
   position: absolute;
   right: 0px;
   z-index: ${p => (p.open ? 2000 : 3)};
@@ -317,16 +318,17 @@ const Tabs = styled<TabsProps, 'div'>('div')`
     font-size: 14px;
   }
   .field-name {
-    color: #1f61a0;
+    color: ${p => p.theme.editorColours.property};
   }
   .type-name {
-    color: rgb(245, 160, 0);
+    color: ${p => p.theme.editorColours.atom};
   }
   .arg-name {
-    color: #1f61a9;
+    color: ${p => p.theme.editorColours.def};
   }
   code {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Fira Code', 'Source Code Pro', monospace;
+    font-variant-ligatures: additional-ligatures;
     border-radius: 2px;
     padding: 1px 2px;
     background: rgba(0, 0, 0, 0.06);
@@ -334,7 +336,7 @@ const Tabs = styled<TabsProps, 'div'>('div')`
 `
 
 const TabContentContainer = styled.div`
-  background: white;
+  background: ${p => p.theme.editorColours.editorBackground};
   display: flex;
   position: relative;
   height: 100%;
@@ -344,7 +346,8 @@ const TabContentContainer = styled.div`
   &::before {
     top: 0;
     bottom: 0;
-    background: ${props => props.theme.colours[props.color] || '#3D5866'};
+    background: ${props =>
+      props.theme.colours[props.color] || props.theme.colours.text};
     position: absolute;
     z-index: 3;
     left: 0px;
@@ -382,11 +385,5 @@ const TabsGradient = styled.div`
   z-index: 1;
   pointer-events: none;
   content: '';
-  background: ${p =>
-    p.index === 0
-      ? `linear-gradient(
-		to right,
-		rgba(255, 255, 255, 1) 30%,
-		rgba(255, 255, 255, 0))`
-      : `transparent`};
+  background: transparent;
 `

@@ -49,4 +49,13 @@ function renderType(type) {
 
 const ArgumentLine = styled.div`
   margin-left: 16px;
+  .arg-name {
+    color: ${p => p.theme.colours.def};
+  }
+  .arg-default-value {
+    color: ${p => p.theme.colours.def};
+  }
+  .type-name {
+    color: ${p => p.theme.colours.atom} !important;
+  }
 `

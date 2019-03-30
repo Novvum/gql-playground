@@ -170,6 +170,7 @@ const OperationName = styled<TabItemProps, 'div'>('div')`
   background: transparent;
   color: ${p => p.theme.editorColours.tabText};
   font-size: 14px;
+  font-weight: 600;
   margin-left: 2px;
   display: inline;
   letter-spacing: 0.53px;
@@ -220,7 +221,7 @@ const Mutation = styled(QueryType)`
 
 const Subscription = styled(QueryType)`
   background: transparent;
-  color: ${p => p.theme.editorColours.variable};
+  color: ${p => p.theme.colours.blue};
 `
 
 const RedDot = styled.div`

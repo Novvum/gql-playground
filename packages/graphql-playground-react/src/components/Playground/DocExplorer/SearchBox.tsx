@@ -1,7 +1,7 @@
 import * as React from 'react'
 import debounce from 'graphiql/dist/utility/debounce'
 import { Search } from '../../Icons'
-import { styled } from '../../../styled'
+import { styled, theme } from '../../../styled'
 
 export interface Props {
   onSearch: (value: string) => void
@@ -37,7 +37,7 @@ export default class SearchBox extends React.Component<Props, State> {
           height={16}
           width={16}
           strokeWidth={3}
-          color={'rgba(0, 0, 0, 0.3)'}
+          color={theme.editorColours.punctuation}
         />
         <Input
           onChange={this.handleChange}
@@ -65,10 +65,9 @@ const SearchContainer = styled.div`
   flex: 0 0 auto;
   z-index: 1;
   display: flex;
-  margin-left: 6px;
-  padding: 25px;
-  background: ${p => p.theme.colours.black02};
-  border-bottom: 1px solid ${p => p.theme.colours.black10};
+  padding: 25px 5px 25px 5px;
+  background: ${p => `${p.theme.editorColours.editorColours}70`};
+  border-bottom: 1px solid ${p => p.theme.editorColours.editorBackground};
   div {
     width: 100%;
   }
@@ -78,15 +77,17 @@ const Label = styled.div`
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  padding: 12px 14px 13px 15px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  background: ${p => p.theme.colours.white};
+  padding: 12px 0px 13px 15px;
+  background: ${p => p.theme.editorColours.editorBackground};
+  border-bottom: 1px solid ${p => p.theme.editorColours.punctuation};
 `
 
 const Input = styled.input`
   font-size: 16px;
   margin-left: 10px;
+  background: transparent;
+  color: ${p => p.theme.colours.text};
   &::placeholder {
-    color: ${p => p.theme.colours.black30};
+    color: ${p => p.theme.editorColours.punctuation};
   }
 `

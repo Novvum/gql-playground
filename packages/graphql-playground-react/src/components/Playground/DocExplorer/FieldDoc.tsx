@@ -175,7 +175,7 @@ const scrollToRight = (element: Element, to: number, duration: number) => {
 }
 
 const DocsHeader = styled.div`
-  background: ${p => p.theme.colours.black02};
+  background: ${p => `${p.theme.editorColours.editorColours}70`};
   padding-top: 20px;
   padding-bottom: 10px;
 
@@ -183,9 +183,12 @@ const DocsHeader = styled.div`
     font-size: 14px;
     font-weight: 600;
     word-wrap: break-word;
+    .type-name {
+      color: ${p => p.theme.editorColours.atom};
+    }
   }
   .doc-category-item .field-name {
-    color: #f25c54;
+    color: ${p => p.theme.editorColours.def};
   }
   div {
     background: transparent;
@@ -196,5 +199,5 @@ const DocsHeader = styled.div`
 const DocsDescription = styled(MarkdownContent)`
   font-size: 14px;
   padding: 0 16px 20px 16px;
-  color: rgba(0, 0, 0, 0.5);
+  color: ${p => p.theme.editorColours.meta};
 `
