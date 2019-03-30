@@ -170,6 +170,7 @@ const OperationName = styled<TabItemProps, 'div'>('div')`
   background: transparent;
   color: ${p => p.theme.editorColours.tabText};
   font-size: 14px;
+  font-weight: 600;
   margin-left: 2px;
   display: inline;
   letter-spacing: 0.53px;
@@ -194,7 +195,6 @@ const Icons = styled<TabItemProps, 'div'>('div')`
 
 const QueryTypes = styled.div`
   display: flex;
-  color: white;
 `
 
 const QueryType = styled.div`
@@ -210,15 +210,18 @@ const QueryType = styled.div`
 `
 
 const Query = styled(QueryType)`
-  background: ${p => p.theme.colours.blue};
+  background: transparent;
+  color: ${p => p.theme.editorColours.def};
 `
 
 const Mutation = styled(QueryType)`
-  background: ${p => p.theme.colours.orange};
+  background: transparent;
+  color: ${p => p.theme.editorColours.string};
 `
 
 const Subscription = styled(QueryType)`
-  background: ${p => p.theme.colours.purple};
+  background: transparent;
+  color: ${p => p.theme.colours.blue};
 `
 
 const RedDot = styled.div`

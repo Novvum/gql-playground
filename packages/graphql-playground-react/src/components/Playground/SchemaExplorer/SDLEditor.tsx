@@ -151,7 +151,7 @@ const Editor = styled.div`
   overflow-y: scroll;
   .CodeMirror {
     background: ${p =>
-      p.theme.mode === 'dark'
+      p.theme.mode !== 'light'
         ? p.theme.editorColours.editorBackground
         : 'white'};
     padding-left: 20px;

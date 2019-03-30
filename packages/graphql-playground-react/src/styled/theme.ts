@@ -1,6 +1,6 @@
 import { ISettings } from '../types'
 import { defaultSettings } from '../state/workspace/reducers'
-
+import { dracula } from './dracula'
 export interface Colours {
   green: string
   darkBlue: string
@@ -94,8 +94,9 @@ export interface EditorColours {
   buttonWorkspaceHover: string
   buttonWorkspaceText: string
   circle: string
+  subscriptionTimeBoaderTop: string
+  subscriptionTimeText: string
 }
-
 export const darkColours: Colours = {
   green: '#27ae60',
   darkBlue: 'rgb(23, 42, 58)',
@@ -134,7 +135,6 @@ export const darkColours: Colours = {
   text: 'rgba(255,255,255,0.6)',
   textInactive: '#555e66',
 }
-
 export const lightColours: Colours = {
   green: '#27ae60',
   darkBlue: 'rgb(23, 42, 58)',
@@ -172,7 +172,6 @@ export const lightColours: Colours = {
   text: 'rgba(0,0,0,.7)',
   textInactive: 'rgba(0,0,0,.3)',
 }
-
 export const darkEditorColours: EditorColours = {
   property: 'rgb(41, 185, 115)',
   comment: 'rgba(255, 255, 255, 0.3)',
@@ -227,6 +226,8 @@ export const darkEditorColours: EditorColours = {
   buttonWorkspaceHover: '#a4acb2',
   buttonWorkspaceText: 'rgb(23, 42, 58)',
   circle: 'rgba(255, 255, 255, 0.4)',
+  subscriptionTimeBoaderTop: 'rgba(255, 255, 255, 0.2)',
+  subscriptionTimeText: 'rgba(255, 255, 255, 0.5)',
 }
 
 export const lightEditorColours: EditorColours = {
@@ -283,6 +284,8 @@ export const lightEditorColours: EditorColours = {
   buttonWorkspaceHover: 'rgb(157, 166, 173)',
   buttonWorkspaceText: 'rgb(238, 239, 240)',
   circle: 'rgba(23,42,58,.4)',
+  subscriptionTimeBoaderTop: 'rgba(23, 42, 58, 0.2)',
+  subscriptionTimeText: 'rgba(23, 42, 58, 0.5)',
 }
 
 export interface Sizes {
@@ -326,7 +329,7 @@ export interface Shorthands {
 export const shorthands: Shorthands = {}
 
 export interface ThemeInterface {
-  mode: 'light' | 'dark'
+  mode: 'light' | 'dark' | 'dracula'
   colours: Colours
   sizes: Sizes
   shorthands: Shorthands
@@ -335,10 +338,17 @@ export interface ThemeInterface {
 }
 
 export const theme: any = {
-  mode: 'dark',
-  colours: darkColours,
+  mode: 'dracula',
+  colours: dracula.colours,
   sizes,
   shorthands,
-  editorColours: darkEditorColours,
+  editorColours: dracula.editorColours,
   settings: defaultSettings,
 }
+
+export interface ColourTheme {
+  editorColours: EditorColours
+  colours: Colours
+}
+
+export { dracula }

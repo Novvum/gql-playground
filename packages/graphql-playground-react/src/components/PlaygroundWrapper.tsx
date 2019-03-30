@@ -13,9 +13,11 @@ import {
 import {
   darkColours,
   lightColours,
+  dracula,
   darkEditorColours,
   lightEditorColours,
   EditorColours,
+  ColourTheme,
 } from '../styled/theme'
 // import OldThemeProvider from './Theme/ThemeProvider'
 import { getActiveEndpoints } from './util'
@@ -326,6 +328,25 @@ class PlaygroundWrapper extends React.Component<
     }
   }
 
+  getColourTheme(theme): ColourTheme {
+    switch (theme) {
+      case 'light':
+        return {
+          editorColours: lightEditorColours,
+          colours: lightColours,
+        }
+      case 'dark':
+        return {
+          editorColours: darkEditorColours,
+          colours: darkColours,
+        }
+      case 'dracula':
+        return dracula
+      default:
+        return dracula
+    }
+  }
+
   removePlaygroundInClass() {
     const root = document.getElementById('root')
     if (root) {
@@ -345,6 +366,7 @@ class PlaygroundWrapper extends React.Component<
     const combinedHeaders = { ...defaultHeaders, ...stateHeaders }
 
     const { theme } = this.props
+
     return (
       <div>
         {title}
@@ -352,9 +374,9 @@ class PlaygroundWrapper extends React.Component<
           theme={{
             ...styledTheme,
             mode: theme,
-            colours: theme === 'dark' ? darkColours : lightColours,
+            colours: this.getColourTheme(theme).colours,
             editorColours: {
-              ...(theme === 'dark' ? darkEditorColours : lightEditorColours),
+              ...this.getColourTheme(theme).editorColours,
               ...this.props.codeTheme,
             },
             settings: this.props.settings,

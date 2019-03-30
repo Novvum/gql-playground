@@ -1,6 +1,6 @@
 {
   "name": "graphql-playground-react",
-  "version": "1.7.19",
+  "version": "1.7.20",
   "main": "./lib/lib.js",
   "typings": "./lib/lib.d.ts",
   "description": "GraphQL IDE for better development workflows (GraphQL Subscriptions, interactive docs & collaboration).",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "http://github.com/graphcool/graphql-playground.git"
   },
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "scripts": {
     "start": "node scripts/start.js",
     "start:analyze": "ANALYZE_BUNDLE=true node scripts/start.js",

@@ -70,7 +70,7 @@ const DocsTypeInferface = styled(SDLType)`
     color: rgb(245, 160, 0);
   }
   .type-name {
-    color: #f25c54;
+    color: ${p => p.theme.colours.blue};
   }
 `
 

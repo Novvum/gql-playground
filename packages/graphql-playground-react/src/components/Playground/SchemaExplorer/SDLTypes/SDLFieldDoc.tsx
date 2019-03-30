@@ -50,5 +50,5 @@ export default class FieldDoc extends React.Component<Props, State> {
 const DocsDescription = styled(MarkdownContent)`
   font-size: 14px;
   padding: 0 16px 20px 16px;
-  color: rgba(0, 0, 0, 0.5);
+  color: ${p => p.theme.colours.text};
 `

@@ -36,14 +36,14 @@ const Tab = styled<TabProps, 'div'>('div')`
   padding: 8px 8px 8px 8px;
   border-radius: 2px 2px 0px 0px;
   color: ${p =>
-    p.theme.mode === 'dark'
-      ? p.theme.colours.white
+    p.theme.mode !== 'light'
+      ? p.theme.colours[p.active ? 'black' : 'white']
       : p.theme.colours[p.active ? 'white' : 'darkBlue']};
   background: ${p =>
     p.active && p.activeColor
       ? p.theme.colours[p.activeColor]
-      : p.theme.mode === 'dark'
-        ? '#3D5866'
+      : p.theme.mode !== 'light'
+        ? p.theme.editorColours.tabInactive
         : '#DBDEE0'};
   box-shadow: -1px 1px 6px 0 rgba(0, 0, 0, 0.3);
   text-transform: uppercase;

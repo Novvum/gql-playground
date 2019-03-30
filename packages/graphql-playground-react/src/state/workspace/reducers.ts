@@ -45,7 +45,7 @@ export const defaultSettings: ISettings = {
   'editor.fontFamily': `'Source Code Pro', 'Consolas', 'Inconsolata', 'Droid Sans Mono', 'Monaco', monospace`,
   'editor.fontSize': 14,
   'editor.reuseHeaders': true,
-  'editor.theme': 'dark',
+  'editor.theme': 'dracula',
   'general.betaUpdates': false,
   'prettier.printWidth': 80,
   'prettier.tabWidth': 2,
@@ -190,7 +190,7 @@ export const getSettings = createSelector(
 function normalizeSettings(settings) {
   const theme = settings['editor.theme']
   if (theme !== 'dark' && theme !== 'light') {
-    settings['editor.theme'] = 'dark'
+    settings['editor.theme'] = 'dracula'
   }
 
   return {
@@ -213,5 +213,5 @@ export function normalizeSettingsString(settingsString) {
 
 export const getTheme = (state, customSettings) => {
   const settings = customSettings || getSettings(state)
-  return settings['editor.theme'] || 'dark'
+  return settings['editor.theme'] || 'dracula'
 }

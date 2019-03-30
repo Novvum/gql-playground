@@ -82,29 +82,34 @@ const DocTypeSchema = styled.div`
 const DocTypeLine = styled.div`
   padding: 6px 16px;
   white-space: nowrap;
+  .field-name {
+    color: ${p => p.theme.editorColours.keyword};
+  }
 `
 
 const DocsTypeName = styled.span`
-  color: #f25c54;
+  color: ${p => p.theme.editorColours.atom};
+  font-weight: 500;
 `
 
 const DocsTypeInferface = styled(TypeLink)`
   padding-left: 16px;
   .field-name {
-    color: rgb(245, 160, 0);
+    color: ${p => p.theme.editorColours.keyword};
   }
   .type-name {
-    color: #f25c54;
+    color: ${p => p.theme.editorColours.atom};
+    font-weight: 500;
   }
 `
 
 const DocsValueComment = styled.span`
-  color: ${p => p.theme.colours.black50};
+  color: ${p => p.theme.editorColours.comment};
   padding-right: 16px;
   padding-left: 32px;
 `
 
 const Brace = styled.span`
   font-weight: 600;
-  color: ${p => p.theme.colours.darkBlue50};
+  color: ${p => p.theme.editorColours.punctuation};
 `

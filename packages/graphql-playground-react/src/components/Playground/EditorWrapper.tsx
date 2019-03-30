@@ -14,7 +14,7 @@ const EditorWrapper = styled.div`
 
   /* Proppery */
   .cm-property {
-    color: ${p => p.theme.editorColours.property};
+    color: ${p => p.theme.editorColours.property} !important;
   }
 
   /* Keyword */
@@ -44,7 +44,7 @@ const EditorWrapper = styled.div`
 
   /* String */
   .cm-string {
-    color: ${p => p.theme.editorColours.string};
+    color: ${p => p.theme.editorColours.string} !important;
   }
 
   /* Boolean */
@@ -54,7 +54,7 @@ const EditorWrapper = styled.div`
 
   /* EnumValue */
   .cm-string-2 {
-    color: ${p => p.theme.editorColours.string2};
+    color: ${p => p.theme.editorColours.string2} !important;
   }
 
   /* Variable */
@@ -807,7 +807,7 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: none;
     margin-left: 0;
     position: relative;
-    z-index: 0; 
+    z-index: 0;
   }
 
   .CodeMirror-hint {
@@ -904,8 +904,12 @@ const GraphqlContainer = styled.div`
   width: 100%;
 `
 
-export const Container = ({ children }) => (
-  <GraphqlContainer>{children}</GraphqlContainer>
+interface Props {
+  setRef?: (ref: any) => void
+}
+
+export const Container: React.SFC<Props> = ({ children, setRef }) => (
+  <GraphqlContainer ref={setRef}>{children}</GraphqlContainer>
 )
 
 export default Wrapper

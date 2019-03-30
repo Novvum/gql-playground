@@ -64,7 +64,7 @@ These are the settings currently available:
   'editor.fontFamily': `'Source Code Pro', 'Consolas', 'Inconsolata', 'Droid Sans Mono', 'Monaco', monospace`,
   'editor.fontSize': 14,
   'editor.reuseHeaders': true, // new tab reuses headers from last tab
-  'editor.theme': 'dark', // possible values: 'dark', 'light'
+  'editor.theme': 'dracula', // possible values: 'dark', 'light', 'dracula'
   'general.betaUpdates': false,
   'prettier.printWidth': 80,
   'prettier.tabWidth': 2,
@@ -93,21 +93,21 @@ The React component `<Playground />` and all middlewares expose the following op
 
 ```ts
 interface ISettings {
-  'editor.cursorShape': 'line' | 'block' | 'underline'
-  'editor.fontFamily': string
-  'editor.fontSize': number
-  'editor.reuseHeaders': boolean
-  'editor.theme': 'dark' | 'light'
-  'general.betaUpdates': boolean
-  'prettier.printWidth': number
-  'prettier.tabWidth': number
-  'prettier.useTabs': boolean
-  'request.credentials': 'omit' | 'include' | 'same-origin'
-  'schema.polling.enable': boolean
-  'schema.polling.endpointFilter': string
-  'schema.polling.interval': number
-  'schema.disableComments': boolean
-  'tracing.hideTracingResponse': boolean
+	'editor.cursorShape': 'line' | 'block' | 'underline'
+	'editor.fontFamily': string
+	'editor.fontSize': number
+	'editor.reuseHeaders': boolean
+	'editor.theme': 'dark' | 'light' | 'dracula'
+	'general.betaUpdates': boolean
+	'prettier.printWidth': number
+	'prettier.tabWidth': number
+	'prettier.useTabs': boolean
+	'request.credentials': 'omit' | 'include' | 'same-origin'
+	'schema.polling.enable': boolean
+	'schema.polling.endpointFilter': string
+	'schema.polling.interval': number
+	'schema.disableComments': boolean
+	'tracing.hideTracingResponse': boolean
 }
 ```
 
@@ -138,6 +138,8 @@ If you simply want to render the Playground HTML on your own, for example when i
 
 1.  [The bare minimum HTML needed to render the Playground](https://github.com/prismagraphql/graphql-playground/blob/master/packages/graphql-playground-html/minimal.html)
 2.  [The Playground HTML with full loading animation](https://github.com/prismagraphql/graphql-playground/blob/master/packages/graphql-playground-html/withAnimation.html)
+
+Note: In case you do not want to serve assets from a CDN (like jsDelivr) and instead use a local copy, you will need to install `graphql-playground-react` from npm, and then replace all instances of `//cdn.jsdelivr.net/npm` with `./node_modules`. An example can be found [here](https://github.com/prismagraphql/graphql-playground/blob/master/packages/graphql-playground-html/minimalWithoutCDN.html)
 
 ### As React Component
 

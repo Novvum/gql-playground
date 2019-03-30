@@ -129,7 +129,7 @@ interface InputProps {
 
 // prettier-ignore
 const Input = styled<InputProps, 'input'>('input')`
-  background: ${p => p.theme.colours.white10};
+  background: ${p => p.theme.editorColours.button};
   border-radius: ${p => p.theme.sizes.smallRadius};
   padding: ${p => `${p.theme.sizes.small16} ${p.theme.sizes.medium25}`};
   font-weight: ${p => p.theme.sizes.fontSemiBold};
