@@ -18,6 +18,7 @@ import {
   lightEditorColours,
   EditorColours,
   ColourTheme,
+  monokai,
 } from '../styled/theme'
 // import OldThemeProvider from './Theme/ThemeProvider'
 import { getActiveEndpoints } from './util'
@@ -342,6 +343,8 @@ class PlaygroundWrapper extends React.Component<
         }
       case 'dracula':
         return dracula
+      case 'monokai':
+        return monokai
       default:
         return dracula
     }

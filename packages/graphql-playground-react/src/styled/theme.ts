@@ -1,6 +1,8 @@
 import { ISettings } from '../types'
 import { defaultSettings } from '../state/workspace/reducers'
 import { dracula } from './dracula'
+import { monokai } from './monokai'
+
 export interface Colours {
   green: string
   darkBlue: string
@@ -329,7 +331,7 @@ export interface Shorthands {
 export const shorthands: Shorthands = {}
 
 export interface ThemeInterface {
-  mode: 'light' | 'dark' | 'dracula'
+  mode: 'light' | 'dark' | 'dracula' | 'monokai'
   colours: Colours
   sizes: Sizes
   shorthands: Shorthands
@@ -351,4 +353,4 @@ export interface ColourTheme {
   colours: Colours
 }
 
-export { dracula }
+export { dracula, monokai }

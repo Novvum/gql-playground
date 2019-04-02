@@ -12,7 +12,7 @@ export type GraphQLClient =
   | 'graphql-request'
   | 'curl'
 
-export type Theme = 'dark' | 'light' | 'dracula'
+export type Theme = 'dark' | 'light' | 'dracula' | 'monokai'
 
 export type CursorShape = 'line' | 'block' | 'underline'
 

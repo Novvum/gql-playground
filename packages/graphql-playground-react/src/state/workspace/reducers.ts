@@ -189,7 +189,7 @@ export const getSettings = createSelector(
 
 function normalizeSettings(settings) {
   const theme = settings['editor.theme']
-  if (theme !== 'dark' && theme !== 'light') {
+  if (theme !== 'dark' && theme !== 'light' && theme !== 'monokai') {
     settings['editor.theme'] = 'dracula'
   }
 
