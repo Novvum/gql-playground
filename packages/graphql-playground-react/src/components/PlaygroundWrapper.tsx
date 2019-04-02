@@ -14,6 +14,7 @@ import {
   darkColours,
   lightColours,
   dracula,
+  framer,
   darkEditorColours,
   lightEditorColours,
   EditorColours,
@@ -345,6 +346,8 @@ class PlaygroundWrapper extends React.Component<
         return dracula
       case 'monokai':
         return monokai
+      case 'framer':
+        return framer
       default:
         return dracula
     }

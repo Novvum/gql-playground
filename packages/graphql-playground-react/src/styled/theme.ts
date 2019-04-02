@@ -2,6 +2,7 @@ import { ISettings } from '../types'
 import { defaultSettings } from '../state/workspace/reducers'
 import { dracula } from './dracula'
 import { monokai } from './monokai'
+import { framer } from './framer'
 
 export interface Colours {
   green: string
@@ -353,4 +354,4 @@ export interface ColourTheme {
   colours: Colours
 }
 
-export { dracula, monokai }
+export { dracula, monokai, framer }
